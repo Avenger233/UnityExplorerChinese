@@ -35,11 +35,11 @@ namespace UnityExplorer
         public static void Init(IExplorerLoader loader)
         {
             if (Loader != null)
-                throw new Exception("UnityExplorer is already loaded.");
+                throw new Exception("UnityExplorer 已经加载.");
 
             Loader = loader;
 
-            Log($"{NAME} {VERSION} initializing...");
+            Log($"{NAME} {VERSION} 初始化...");
 
             CheckLegacyExplorerFolder();
             Directory.CreateDirectory(ExplorerFolder);

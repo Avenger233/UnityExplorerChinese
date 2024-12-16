@@ -7,7 +7,7 @@ namespace UnityExplorer.UI.Panels
     {
         public static InspectorPanel Instance { get; private set; }
 
-        public override string Name => "Inspector";
+        public override string Name => "检查器";
         public override UIManager.Panels PanelType => UIManager.Panels.Inspector;
         public override bool ShouldSaveActiveState => false;
 
@@ -51,7 +51,7 @@ namespace UnityExplorer.UI.Panels
             GameObject mouseDropdown = UIFactory.CreateDropdown(closeHolder, "MouseInspectDropdown", out MouseInspectDropdown, "Mouse Inspect", 14,
                 MouseInspector.OnDropdownSelect);
             UIFactory.SetLayoutElement(mouseDropdown, minHeight: 25, minWidth: 140);
-            MouseInspectDropdown.options.Add(new Dropdown.OptionData("Mouse Inspect"));
+            MouseInspectDropdown.options.Add(new Dropdown.OptionData("鼠标查看"));
             MouseInspectDropdown.options.Add(new Dropdown.OptionData("World"));
             MouseInspectDropdown.options.Add(new Dropdown.OptionData("UI"));
             mouseDropdown.transform.SetSiblingIndex(0);
